@@ -1,73 +1,114 @@
-# Welcome to your Lovable project
+# Lab Hack Nexus
 
-## Project info
+A website for educational content about cybersecurity and hacking.
 
-**URL**: https://lovable.dev/projects/f61b4439-1c09-4b92-a84f-146f26a17942
+## Project Overview
 
-## How can I edit this code?
+Lab Hack Nexus is a full-stack web application built with React and Go, designed to provide educational content about cybersecurity and ethical hacking. The project features a modern UI with category-based content organization and a responsive design.
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+### Frontend
+- Vite + React
+- TypeScript
+- Tailwind CSS
+- shadcn/ui components
+- React Context for state management
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f61b4439-1c09-4b92-a84f-146f26a17942) and start prompting.
+### Backend
+- Go
+- SQLite database
+- RESTful API architecture
 
-Changes made via Lovable will be committed automatically to this repo.
+## Project Structure
 
-**Use your preferred IDE**
+```
+├── frontend/          # React frontend application
+│   ├── src/
+│   │   ├── components/    # React components
+│   │   ├── pages/        # Page components
+│   │   ├── contexts/     # React contexts
+│   │   └── hooks/        # Custom React hooks
+│   
+├── backend/           # Go backend server
+│   ├── handlers/     # API endpoint handlers
+│   ├── models/       # Data models
+│   ├── config/       # Configuration
+│   └── data/         # SQLite database
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Getting Started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
+- Node.js (v16 or higher)
+- Go (v1.16 or higher)
+- Git
 
-Follow these steps:
+### Frontend Setup
 
+1. Navigate to the frontend directory:
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+cd frontend
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Install dependencies:
+```sh
+npm install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The frontend will be available at http://localhost:5173
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Backend Setup
 
-**Use GitHub Codespaces**
+1. Navigate to the backend directory:
+```sh
+cd backend
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+2. Run the Go server:
+```sh
+go run main.go
+```
 
-## What technologies are used for this project?
+The backend API will be available at http://localhost:3000
 
-This project is built with:
+## Features
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- Category-based content organization
+- Create and manage educational posts
+- Modern, responsive UI
+- SQLite database for data persistence
+- RESTful API endpoints
 
-## How can I deploy this project?
+## API Endpoints
 
-Simply open [Lovable](https://lovable.dev/projects/f61b4439-1c09-4b92-a84f-146f26a17942) and click on Share -> Publish.
+### Categories
+- GET /api/categories - List all categories
+- POST /api/categories - Create a new category
+- GET /api/categories/:id - Get category details
+- PUT /api/categories/:id - Update a category
+- DELETE /api/categories/:id - Delete a category
 
-## Can I connect a custom domain to my Lovable project?
+### Posts
+- GET /api/posts - List all posts
+- POST /api/posts - Create a new post
+- GET /api/posts/:id - Get post details
+- PUT /api/posts/:id - Update a post
+- DELETE /api/posts/:id - Delete a post
 
-Yes it is!
+## Contributing
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/YourFeature`)
+3. Commit your changes (`git commit -m 'Add some feature'`)
+4. Push to the branch (`git push origin feature/YourFeature`)
+5. Open a Pull Request
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Project Repository
+
+**URL**: https://github.com/Bruno-BRG/lab-hack-nexus
