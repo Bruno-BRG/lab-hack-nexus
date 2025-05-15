@@ -1,0 +1,1 @@
+INSERT INTO "public"."profiles" ("id", "username", "bio", "avatar_url", "is_admin", "created_at", "updated_at") VALUES ('157e97f0-8a4d-4d12-add1-f9a05cd4098d', 'hugo_hack587', 'Sou o fundador do lab hack e criador desse site. Só falta ganhar dinheiro.', null, 'false', '2025-04-26 14:33:33.959859+00', '2025-05-03 13:04:07.011+00');
